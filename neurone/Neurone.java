@@ -71,7 +71,7 @@ public abstract class Neurone implements iNeurone
 		// Un "drapeau" indiquant si toutes les entrées ont permis de trouver
 		// les résultats attendus (=> l'apprentissage est alors fini), ou s'il
 		// y a au moins un cas qui ne correspond pas (=> apprentissage pas fini)
-		boolean apprentissageFini = true;
+		boolean apprentissageFini;
 
 		// On boucle jusqu'à ce que l'apprentissage soit fini
 		do
@@ -99,11 +99,12 @@ public abstract class Neurone implements iNeurone
 					}
 					// On met aussi à jour le biais
 					fixeBiais(biais() + eta * erreur);
-				} 
-					
+
 					// Et on mémorise que l'apprentissage n'est pas finalisé
 					apprentissageFini = false;
 					compteurEchecs += 1;
+				} 
+				
 			}
 		}
 		while (!apprentissageFini);

@@ -13,7 +13,7 @@ public class testNeurone
 		//final iNeurone n = new NeuroneSigmoide(entrees[0].length);
 		//final iNeurone n = new NeuroneReLU(entrees[0].length);
 		
-		System.out.println("Apprentissage…");
+		System.out.println("Apprentissage en cours ...");
 		// On lance l'apprentissage de la fonction ET sur ce neurone
 		System.out.println("Nombre de tours : "+n.apprentissage(entrees, resultats));
 		
