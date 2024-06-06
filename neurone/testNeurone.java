@@ -2,6 +2,10 @@ public class testNeurone
 {
 	public static void main(String[] args)
 	{
+        final float zero = (float)Math.random() * (float)0.2;
+        final float one = (float)Math.random() * (float)(1-0.2);
+        final float[] entrees_test = {zero, one};
+		//final float[] entrees_test = {0.9f, 0.8f};
 		// Tableau des entrées de la fonction ET (0 = faux, 1 = vrai)
 		final float[][] entrees = {{0, 0}, {0, 1}, {1, 0}, {1, 1}};
 		
@@ -10,10 +14,10 @@ public class testNeurone
 		
 		// On crée un neurone taillé pour apprendre la fonction ET
 		final iNeurone n = new NeuroneHeaviside(entrees[0].length);
-		//final iNeurone n = new NeuroneSigmoide(entrees[0].length);
+		//final iNeurone n = new NeuroneSigmoide(entrees[0].length); 
 		//final iNeurone n = new NeuroneReLU(entrees[0].length);
 		
-		System.out.println("Apprentissage en cours ...");
+		System.out.println("Apprentissage…");
 		// On lance l'apprentissage de la fonction ET sur ce neurone
 		System.out.println("Nombre de tours : "+n.apprentissage(entrees, resultats));
 		
@@ -41,5 +45,9 @@ public class testNeurone
 			// On affiche cette sortie
 			System.out.println("Entree "+i+" : "+n.sortie());
 		}
+		System.out.println("Test sur echantillon bruité ...");
+		System.out.println("Entrées test : "+ zero+" " + one);
+		n.metAJour(entrees_test);
+		System.out.println("Sortie = "+ n.sortie());
 	}
 }
