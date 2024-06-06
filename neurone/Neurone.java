@@ -88,11 +88,18 @@ public abstract class Neurone implements iNeurone
 				metAJour(entree);
 				
 				// On regarde la différence avec le résultat attendu
-				
+				float erreur = resultats[i] - sortie();
+
 				// Si l'erreur absolue dépasse la tolérance autorisée 
-					// On met à jour les poids synaptiques
-					
-					// On met aussi à jour le biais 
+				if(Math.abs(erreur) > ToleranceSortie){
+					for(int j=0 ; j < synapses().length ; j++){
+
+						// On met à jour les poids synaptiques
+						synapses()[j] += eta * erreur * entree[j];
+					}
+					// On met aussi à jour le biais
+					fixeBiais(biais() + eta * erreur);
+				} 
 					
 					// Et on mémorise que l'apprentissage n'est pas finalisé
 					apprentissageFini = false;
