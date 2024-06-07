@@ -5,12 +5,12 @@ public class testNeurone
         final float zero = (float)Math.random() * (float)0.2;
         final float one = (float)Math.random() * (float)(1-0.2);
         final float[] entrees_test = {zero, one};
-		//final float[] entrees_test = {0.9f, 0.8f};
+		//final float[] entrees_test = {0.9f, 0.9f};
 		// Tableau des entrées de la fonction ET (0 = faux, 1 = vrai)
 		final float[][] entrees = {{0, 0}, {0, 1}, {1, 0}, {1, 1}};
 		
 		// Tableau des sorties de la fonction ET
-		final float[] resultats = {0, 0, 0, 1};
+		final float[] resultats = {0, 1, 1, 1};
 		
 		// On crée un neurone taillé pour apprendre la fonction ET
 		//final iNeurone n = new NeuroneHeaviside(entrees[0].length);
