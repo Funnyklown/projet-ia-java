@@ -1,7 +1,7 @@
 public class FFTSon {
 
 
-    private Complexe[] fftSon;
+    private final Complexe[] fftSon;
 
     public FFTSon(String path, int tailleBloc){
         Son son = new Son(path);
