@@ -1,6 +1,5 @@
 public class FFTSon {
 
-
     private final Complexe[] fftSon;
 
     public FFTSon(String path, int tailleBloc){
@@ -19,5 +18,19 @@ public class FFTSon {
 
     public Complexe[] getFftSon(){
         return this.fftSon;
+    }
+    public float[] getFftSonMod(){
+        float[] tab_mod = new float[this.fftSon.length];
+        for( int i = 0 ; i < this.fftSon.length ; i++){
+            tab_mod[i]=(float)this.fftSon[i].mod();
+        }
+        return tab_mod;
+    }
+    public float[] getFftSonArg(){
+        float[] tab_arg = new float[this.fftSon.length];
+        for( int i = 0 ; i < this.fftSon.length ; i++){
+            tab_arg[i]=(float)this.fftSon[i].arg();
+        }
+        return tab_arg;
     }
 }
