@@ -54,8 +54,8 @@ public class Detecteur {
 
     public static void main(String[] args) {
         String pathToTest = "./sons/Bruit.wav";
-        String[] entrees_paths = {"./sons/Sinusoide.wav", "./sons/Sinusoide2.wav", "./sons/Bruit.wav"};
-        float[] sorties = {1, 1, 0};
+        String[] entrees_paths = {"./sons/Sinusoide.wav", "./sons/Sinusoide2.wav", "./sons/Bruit.wav", "./sons/Carre.wav"};
+        float[] sorties = {1, 0, 0, 0};
 
 
         Detecteur detecteur = new Detecteur(entrees_paths, sorties, 512);

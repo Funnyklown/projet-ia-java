@@ -1,0 +1,13 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "Main", // Remplacez "Main" par le nom complet de votre classe principale
+            "projectName": "projet-ia-java", // Remplacez "YourProjectName" par le nom de votre projet
+            "cwd": "${workspaceFolder}" // Définit le répertoire de travail courant comme le dossier racine de votre projet
+        }
+    ]
+}
