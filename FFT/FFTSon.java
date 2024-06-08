@@ -2,6 +2,7 @@ public class FFTSon {
 
     private final Complexe[] fftSon;
 
+    //Constructeur qui retourne la FFT d'un son et la stocke dans fftSon
     public FFTSon(String path, int tailleBloc){
         Son son = new Son(path);
         Complexe[] EchantillonsCplx = new Complexe[tailleBloc];
@@ -19,6 +20,7 @@ public class FFTSon {
     public Complexe[] getFftSon(){
         return this.fftSon;
     }
+    //Retourne un tableau de flottants contenant les modules des complexes de la FFT
     public float[] getFftSonMod(){
         float[] tab_mod = new float[this.fftSon.length];
         for( int i = 0 ; i < this.fftSon.length ; i++){
@@ -26,6 +28,7 @@ public class FFTSon {
         }
         return tab_mod;
     }
+    //Retourne un tableau de flottants contenant les arguments des complexes de la FFT
     public float[] getFftSonArg(){
         float[] tab_arg = new float[this.fftSon.length];
         for( int i = 0 ; i < this.fftSon.length ; i++){
