@@ -64,7 +64,7 @@ public class Detecteur {
 
     public static void main(String[] args) {
         //Le son qu'on veut tester contre le modele appris
-        String pathToTest = "./sons/Bruit.wav";
+        String pathToTest = "./sons/Sinusoide2bruitee.wav";
 
         //Les entrees qui serviront de dataset pour entrainer le neurone
         String[] entrees_paths = {"./sons/Sinusoide.wav", "./sons/Sinusoide2.wav", "./sons/Bruit.wav"};
